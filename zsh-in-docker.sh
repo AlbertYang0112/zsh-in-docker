@@ -185,3 +185,5 @@ if [ "$THEME" = "default" ]; then
     git clone --depth 1 https://github.com/romkatv/powerlevel10k "$HOME"/.oh-my-zsh/custom/themes/powerlevel10k
     powerline10k_config >> "$HOME"/.zshrc
 fi
+
+curl https://raw.githubusercontent.com/AlbertYang0112/zsh-in-docker/master/p10k.zsh > "$HOME"/.p10k.zsh
