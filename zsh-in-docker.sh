@@ -187,3 +187,5 @@ if [ "$THEME" = "default" ]; then
 fi
 
 curl https://raw.githubusercontent.com/AlbertYang0112/zsh-in-docker/master/p10k.zsh > "$HOME"/.p10k.zsh
+echo "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> "$HOME/.zshrc"
+sed '1s/^/if \[\[ -r \"\$\{XDG_CACHE_HOME:-\$HOME\/\.cache\}\/p10k-instant-prompt-\$\{\(\%\):-\%n\}\.zsh\" \]\]\; then\n  source \"\$\{XDG_CACHE_HOME:-\$HOME\/\.cache\}\/p10k-instant-prompt-\$\{\(\%\)\:-\%n\}\.zsh\"\nfi\n/' "$HOME"/.zshrc > "$HOME"/.zshrc
